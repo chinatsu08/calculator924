@@ -1,0 +1,352 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 2017/09/11, 16:24:07
+    Author     : S4-17
+*/
+
+@import 
+url(https://fonts.googleapis.com/css?family=Orbitron);
+@import
+url(https://fonts.googleapis.com/css?family=Pacifico);
+html {
+    height: 100%;
+    color:black;
+}
+body{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: 100%;
+    background-image: url("./cloudy-day.png");
+    
+}
+
+#hukidasi{
+     position: relative;
+     display: inline-block;
+     margin: 1.5em 0;
+     padding: 50px 30px;
+     min-width: 200px;
+     max-width: 300px;
+     color: #555;
+     font-size: 16px;
+     background:#98d2d9;
+     /*#e0edff*/
+
+     border-radius:15px;
+     margin-left: 100px;
+     margin-top: 80px;
+     font-size:20px;
+     text-align: center;
+    
+     
+}
+
+#hukidasi:before{
+    content: "";
+    position: absolute;
+    top:100%;
+    left:50%;
+    margin-left: -15px;
+    border:15px solid transparent;
+    border-top: 15px solid #98d2d9;
+    z-index: 2;
+}
+
+
+.dog{
+   margin-top: 20px;
+    margin-left: 120px;
+      
+      display: block;
+}
+.wapper{
+    position: absolute;
+    top:20px;
+    margin: 0 auto 0 500px;
+    width: 430px;
+    height: 590px;
+     background-color: #f9f3d8;
+    display: inline-table;
+    border-radius:25px;
+    border: #908b85 solid 2px;
+    box-shadow: inset -15px 12px 15px -15px gray/*right*/,inset 13px -13px 13px -13px gray /*bottom*/, 8px 15px 30px 3px #696969/*outter shadow*/;
+    text-align: center;
+    z-index:1;
+}
+p{
+    text-align: center;
+    font-family: 'Pacifico';
+    font-size: 23px;
+    
+  
+}
+.calculator{
+   
+    table-layout:fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -15px;
+    height: 380px;
+    width: 380px;
+   
+}
+.screen{
+   
+     height: 80px;
+    width: 380px;
+    table-layout:fixed;
+    margin-left: auto;
+    margin-right: auto;
+    margin: -25px auto;
+    margin-bottom: 8px;
+    
+}
+.main{
+    
+    height:500px;
+    margin-top: -15px;
+  
+}
+table,tr,td{
+    border: 2px solid #f9f3d8;
+      margin: 0 auto;
+    
+}
+td,tr{
+    width: 20%;
+    margin-right: auto;
+    text-align: center;
+    height:20%;
+}
+#shot{
+  
+  width: 280px;
+  height: 30px;
+  background-color:#c3c2ab;
+  border-radius:5px;
+  margin: 0 auto;
+  border: #b4b39D solid 2px;
+  position: relative;
+  box-shadow: inset 0px -2px 15px #9f9f9f;
+  border-bottom: none;
+  
+}
+
+.calculator{
+    padding-top: 10px;
+}
+#current{
+    font-size:25px;
+    overflow: hidden;
+    text-align: right;
+    position:absolute;
+    right:2px;
+    top:0px;
+    font-family: 'Orbitron', sans-serif;
+    
+}
+#past{
+    overflow: hidden;
+    font-size:30px;
+    font-family: 'Orbitron', sans-serif;
+    text-align: right;
+    position: absolute;
+    right:-1px;
+    padding: 0px 3px 0 0;
+}
+input{
+    width: 100%;
+    height: 100%;
+    font-size: 35px;
+   
+    
+}
+
+/*アウトライン*/
+.nu,.num,.numb,.key,.go:focus {
+  outline:1px;
+}
+/*カーソル*/
+.nu,.num,.numb,.key,.go:hover{
+  cursor: pointer;
+}
+
+.nu,.num,.numb,.key,.go,.stop{
+    border: none;
+   
+   
+}
+.num{
+    -webkit-text-stroke:1px #bd9f00;
+    height: 75px;
+    width: 83px;
+    display: inline-block;
+    text-decoration: none;
+    border-color: #d5d185;
+    background-color: #F7FFBA;
+    color: #ffd25b;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px rgba(255, 255, 255, 0.5);
+    text-align: center;
+    font-size: 45px;
+  
+    	
+        -webkit-box-shadow:inset 0px 1px 1px #d5d185, 1px 5px 1px 1px #d5d185, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #d5d185, 1px 5px 1px 1px #d5d185, 1px 10px 5px gray;
+	-o-box-shadow: inset 0px 1px 1px #d5d185, 1px 5px 1px 1px #d5d185, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #d5d185, 1px 5px 1px 1px #d5d185, 1px 10px 5px gray;
+
+}
+
+
+.num:active   {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+.key{
+    width: 83px;
+    display: inline-block;
+    -webkit-text-stroke:1px #ce7600;
+    border-color: #d5c679;
+    background-color: #FFEBB7;
+    color: #ffac4d;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 48px;
+    /*#F7FFBA;*/ 
+    	
+ 
+        -webkit-box-shadow:inset 0px 1px 1px #d5c679, 1px 5px 1px 1px #d5c679, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #d5c679, 1px 5px 1px 1px #d5c679, 1px 10px 5px gray;
+	-o-box-shadow: inset 0px 1px 1px #d5c679, 1px 5px 1px 1px #d5c679, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #d5c679, 1px 5px 1px 1px #d5c679, 1px 10px 5px gray;
+}
+.key:active{
+
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
+.numb{
+    width: 83px;
+    height: 75px;
+    display: inline-block;
+   -webkit-text-stroke:1px #98682b;
+    text-decoration: none;
+    border-color: #c4995a;
+    background-color: #EBAF81;  
+    color: #ce9168;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+    
+        -webkit-box-shadow: inset 0px 1px 1px #c4995a, 1px 5px 1px 1px #c4995a, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #c4995a, 1px 5px 1px 1px #c4995a, 1px 10px 5px gray;
+	-o-box-shadow: inset 0px 1px 1px #c4995a, 1px 5px 1px 1px #c4995a, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #c4995a, 1px 5px 1px 1px #c4995a, 1px 10px 5px gray;
+}
+.numb:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+
+}
+.nu{
+    width: 83px;
+    height: 75px;
+    display: inline-block;
+    border-color: #cb998d;
+    background-color: #FCA7A7;  
+    border-radius: 5px;
+    font-weight: bold;
+    -webkit-text-stroke:1px #b75b35;
+    text-align: center;
+    color:#df7962;
+    font-size:48px;
+  
+    
+
+        -webkit-box-shadow: inset 0px 1px 1px #cb998d, 1px 5px 1px 1px #cb998d, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #cb998d, 1px 5px 1px 1px #cb998d, 1px 10px 5px gray;
+	-o-box-shadow:inset 0px 1px 1px #cb998d, 1px 5px 1px 1px #cb998d, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #cb998d, 1px 5px 1px 1px #cb998d, 1px 10px 5px gray;
+}
+.nu:active{
+
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
+.go{
+    display: inline-block;
+    border-color: #cb998d;
+    background-color: #FCA7A7; 
+    border-radius: 5px;
+    font-weight: bold;
+     display: none;
+    font-size: 25px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    margin-top: 35px;
+    
+        -webkit-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+	-o-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+}
+
+.go:active{
+
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+
+}
+.stop{
+    display: inline-block;
+    border-color: #cb998d;
+    background-color: #FCA7A7; 
+    /*display: none;*/
+    border-radius: 5px;
+    
+    font-size: 25px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    margin-top: 35px;
+    
+        -webkit-box-shadow:inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+	-o-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+        display:none;
+}
+.stop:active{
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+}
+
