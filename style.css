@@ -15,21 +15,23 @@ url(https://fonts.googleapis.com/css?family=Pacifico);
 html {
     height: 100%;
     color:black;
+    overflow: hidden;
 }
 body{
     margin: 0 0 0 0;
-    padding: 0 0 0 0;
+    padding: 0 0 0 5%;
     height: 100%;
     background-image: url("./cloudy-day.png");
     
 }
-
+/*ふきだし*/
 #hukidasi{
-     position: relative;
-     display: inline-block;
+     position: absolute;
+     bottom:320px;
+     display: block;
      margin: 1.5em 0;
      padding: 50px 30px;
-     min-width: 200px;
+     min-width: 300px;
      max-width: 300px;
      color: #555;
      font-size: 16px;
@@ -37,14 +39,13 @@ body{
      /*#e0edff*/
 
      border-radius:15px;
-     margin-left: 100px;
+     margin-left: 52px;
      margin-top: 80px;
      font-size:20px;
      text-align: center;
     
      
 }
-
 #hukidasi:before{
     content: "";
     position: absolute;
@@ -55,14 +56,48 @@ body{
     border-top: 15px solid #98d2d9;
     z-index: 2;
 }
+/*占うボタン*/
+.go{
+    display: block;
+    border-color: #cb998d;
+    color: #b75b35;
+    background-color: #FCA7A7; 
+    border-radius: 5px;
+    font-weight: bold;
+     display: none;
+    font-size: 25px;
+    text-align: center;
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+    margin-left: 80px;
+        -webkit-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+        -moz-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+	-o-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+	box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
+}
+
+.go:active{
+
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+    border-bottom: none;
+
+}
 
 
+/*犬*/
 .dog{
+   position: absolute;
+   bottom: 35px;
    margin-top: 20px;
     margin-left: 120px;
       
       display: block;
 }
+/*電卓全体*/
 .wapper{
     position: absolute;
     top:20px;
@@ -77,6 +112,7 @@ body{
     text-align: center;
     z-index:1;
 }
+/*電卓文字*/
 p{
     text-align: center;
     font-family: 'Pacifico';
@@ -84,6 +120,7 @@ p{
     
   
 }
+/*電卓キーtable*/
 .calculator{
    
     table-layout:fixed;
@@ -94,9 +131,10 @@ p{
     width: 380px;
    
 }
+/*結果出力画面table*/
 .screen{
-   
-     height: 80px;
+   overflow: hidden;
+    height: 80px;
     width: 380px;
     table-layout:fixed;
     margin-left: auto;
@@ -105,6 +143,7 @@ p{
     margin-bottom: 8px;
     
 }
+/*結果出力から電卓キー全体*/
 .main{
     
     height:500px;
@@ -122,6 +161,7 @@ td,tr{
     text-align: center;
     height:20%;
 }
+/*結果出力画面*/
 #shot{
   
   width: 280px;
@@ -135,10 +175,11 @@ td,tr{
   border-bottom: none;
   
 }
-
+/*電卓キー*/
 .calculator{
     padding-top: 10px;
 }
+/*記号出力*/
 #current{
     font-size:25px;
     overflow: hidden;
@@ -149,6 +190,7 @@ td,tr{
     font-family: 'Orbitron', sans-serif;
     
 }
+/*数字出力*/
 #past{
     overflow: hidden;
     font-size:30px;
@@ -166,6 +208,7 @@ input{
     
 }
 
+/*電卓キーの設定*/
 /*アウトライン*/
 .nu,.num,.numb,.key,.go:focus {
   outline:1px;
@@ -180,6 +223,7 @@ input{
    
    
 }
+/*数字キー*/
 .num{
     -webkit-text-stroke:1px #bd9f00;
     height: 75px;
@@ -211,6 +255,7 @@ input{
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-bottom: none;
 }
+/*＋-×÷*/
 .key{
     width: 83px;
     display: inline-block;
@@ -238,7 +283,7 @@ input{
     box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
     border-bottom: none;
 }
-
+/*Ｃ％*/
 .numb{
     width: 83px;
     height: 75px;
@@ -266,6 +311,7 @@ input{
     border-bottom: none;
 
 }
+/*★*/
 .nu{
     width: 83px;
     height: 75px;
@@ -295,58 +341,4 @@ input{
     border-bottom: none;
 }
 
-.go{
-    display: inline-block;
-    border-color: #cb998d;
-    background-color: #FCA7A7; 
-    border-radius: 5px;
-    font-weight: bold;
-     display: none;
-    font-size: 25px;
-    text-align: center;
-    width: 300px;
-    height: 50px;
-    margin-top: 35px;
-    
-        -webkit-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-        -moz-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-	-o-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-	box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-}
-
-.go:active{
-
-    -ms-transform: translateY(4px);
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-    border-bottom: none;
-
-}
-.stop{
-    display: inline-block;
-    border-color: #cb998d;
-    background-color: #FCA7A7; 
-    /*display: none;*/
-    border-radius: 5px;
-    
-    font-size: 25px;
-    text-align: center;
-    width: 300px;
-    height: 50px;
-    margin-top: 35px;
-    
-        -webkit-box-shadow:inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-        -moz-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-	-o-box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-	box-shadow: inset 0px 1px 1px #cb998d, 1px 6px 1px 1px #cb998d, 1px 10px 5px gray;
-        display:none;
-}
-.stop:active{
-    -ms-transform: translateY(4px);
-    -webkit-transform: translateY(4px);
-    transform: translateY(4px);
-    box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
-    border-bottom: none;
-}
 

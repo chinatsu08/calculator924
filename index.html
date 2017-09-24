@@ -14,12 +14,14 @@ and open the template in the editor.
         <script src="./javascript.js?201709201737"></script>
     </head>
     <body>
-        <div id="hukidasi">計算するよ。</div>
-        <!--<img class="hukidasi" src="tnm (1).png">-->
+        <input class="go" type="button" value="占いスタート" onclick="go()">
         
+        <div id="hukidasi">計算するよ。</div>
+     
         <img class="dog" src="./dog1_smile.png">
         
         <!--電卓のレイアウト-->
+        <div id="style">
         <div class="wapper">
         
          <p class="title">Calculator</p>
@@ -67,15 +69,16 @@ and open the template in the editor.
                 <td><input class="key" type="button" value="÷" onclick="myCalc('/')"></td> 
                
             </tr>
-            <div>
+            </div>
         </table>
-                 
-        
-                <input class="go" type="button" value="占いスタート" onclick="go()">
-            
-                <input class="stop" type="button" value="STOP" onclick="stop()" >
+         </div>     
         </form>
+          
         
+                
         </div>
+        
+        
+        
     </body>
 </html>
