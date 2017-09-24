@@ -16,7 +16,7 @@ function Clear(){
     previousSimbol="";
     show=0;
     document.getElementById("past").innerHTML=nowNumber;
-    document.getElementById("hukidasi").innerHTML="計算するよ";
+    document.getElementById("hukidasi").innerHTML="計算するよ。";
     document.getElementById("current").innerHTML=previousSimbol;
     $("img").attr("src","./dog1_smile.png");
 }
@@ -146,7 +146,7 @@ function equal(){
     //previousSimbol=previous;
     $("img").attr("src","./dog4_laugh.png");
      document.getElementById("past").innerHTML=show.toFixed(0);
-     document.getElementById("hukidasi").innerHTML=(show.toFixed(0)+"だよ");
+     document.getElementById("hukidasi").innerHTML=(show.toFixed(0)+"だよ。");
      document.getElementById("current").innerHTML=previous;
      //初期化して次の計算へ
     show=0;
@@ -201,7 +201,7 @@ function fortune(){
     });
 
     $('.numb').on('click',function(){
-        document.getElementById("hukidasi").innerHTML=("計算するよ");
+        document.getElementById("hukidasi").innerHTML=("計算するよ。");
         $("img").attr("src","./dog1_smile.png");
         $('.go').hide();
     });
